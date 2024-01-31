@@ -121,9 +121,9 @@ class _HomeScreenState extends State<HomeScreen> {
             tabs: [
               _buildTab('Apple'),
               _buildTab('Tesla'),
-              _buildTab('Biz'),
+              _buildTab('Business'),
               _buildTab('Tech'),
-              _buildTab('WSJ'),
+              _buildTab('Journal'),
             ],
             indicator: CustomTabIndicator(text: ''),
             indicatorSize: TabBarIndicatorSize.tab,
@@ -168,9 +168,9 @@ class _HomeScreenState extends State<HomeScreen> {
     // // Widget _buildNewsTab(BuildContext context, int tabIndex, String source) {
     //   final _userProvider = Provider.of<UserProvider>(context, listen: false);
 
-      if (userProvider.user == null || userProvider.user?.source?.id != source) {
-        _fetchNews(userProvider, source);
-      }
+    if (userProvider.user == null || userProvider.user?.source?.id != source) {
+      _fetchNews(userProvider, source);
+    }
     return Column(
       children: [
         Padding(
